@@ -4,4 +4,4 @@ Console.Write(numberA);
 Console.Write(" * ");
 Console.Write(numberB);
 Console.Write(" = ");
-Console.WriteLine (numberA + numberB);
+Console.WriteLine(numberA + numberB);
