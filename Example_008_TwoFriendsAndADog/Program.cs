@@ -5,26 +5,25 @@ int secondFriendSpeed = int.Parse(Console.ReadLine() ?? "");
 Console.Write("Enter dog's speed: ");
 int dogSpeed = int.Parse(Console.ReadLine() ?? "");
 Console.Write("What distance between two friends is? ");
-int distance = int.Parse(Console.ReadLine() ?? "");
+double distance = double.Parse(Console.ReadLine() ?? "");
 int count = 0;
 int dogDirection = 2;
+double time = 0;
 
 while (distance > dogSpeed + firstFriendSpeed + secondFriendSpeed)
 {
     if (dogDirection == 2)
     {
-        count++;
-        int time = distance / (dogSpeed + secondFriendSpeed);
-        distance = distance - time * (firstFriendSpeed + secondFriendSpeed);
+        time = distance / (dogSpeed + secondFriendSpeed);
         dogDirection = 1;
     }
     else
     {
-        count++;
-        int time = distance / (dogSpeed + firstFriendSpeed);
-        distance = distance - time * (firstFriendSpeed + secondFriendSpeed);
+        time = distance / (dogSpeed + firstFriendSpeed);
         dogDirection = 2;
     }
+    count++;
+    distance = distance - time * (firstFriendSpeed + secondFriendSpeed);
 }
 
 Console.Clear();
