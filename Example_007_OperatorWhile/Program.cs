@@ -20,18 +20,18 @@ int count = 0;
 
 while (count < 20000)
 {
-    int temp = new Random().Next(0,3);
-    if (temp ==0)
+    int temp = new Random().Next(0, 3);
+    if (temp == 0)
     {
         x = (x + xa) / 2;
         y = (y + ya) / 2;
     }
-    if (temp ==1)
+    if (temp == 1)
     {
         x = (x + xb) / 2;
         y = (y + yb) / 2;
     }
-    if (temp ==2)
+    if (temp == 2)
     {
         x = (x + xc) / 2;
         y = (y + yc) / 2;
